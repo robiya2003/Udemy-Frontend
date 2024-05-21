@@ -1,0 +1,95 @@
+footer {
+    width: 100%;
+    background: #2D2F31;
+    padding: 24px 48px 0 48px;
+
+    .footer__companies {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 24px 0;
+        border-bottom: 1px solid rgb(98, 98, 98);
+        margin-bottom: 24px;
+
+        h2 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+
+            a{
+                color: #C0C4FC;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .brands{
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+    }
+
+    .footer__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        &--list {
+            display: flex;
+
+            ul {
+                li {
+                    width: 256px;
+                    list-style-type: none;
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 14px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-btn {
+            button {
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                cursor: pointer;
+                padding: 10px 30px 10px 16px;
+                font-family: "Open Sans", sans-serif;
+            }
+        }
+
+    }
+
+    .logo {
+        padding: 64px 0 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 91px;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 12px;
+            font-family: "Open Sans", sans-serif;
+            line-height: 16.8px;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,187 @@
+header {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08),
+        0 4px 12px rgba(0, 0, 0, .08);
+
+    .header-top {
+        background-color: #5624D0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            letter-spacing: 0.2px;
+            align-items: center;
+            font-family: "Open Sans", sans-serif;
+            display: flex;
+            gap: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: 800 !important;
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        i {
+            color: white;
+            font-size: 15px;
+
+        }
+    }
+
+    .header-bottom {
+        padding: 12px 15px;
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 91px;
+                height: 34px;
+            }
+
+            &-search {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                width: 720px;
+                border: 1px solid black;
+                border-radius: 50px;
+                background-color: #F7F9FA;
+                padding: 10px 24px 10px 15px;
+
+                input {
+                    background-color: #F7F9FA;
+                    outline: none;
+                    border: none;
+                    width: 700px;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 14px;
+                    height: 28px;
+                }
+            }
+
+            &-item {
+                text-decoration: none;
+                font-family: "Open Sans", sans-serif;
+                color: #2D2F31;
+                font-size: 14px;
+
+                &:hover {
+                    color: #5624D0;
+                }
+
+                // &:nth-child(2):hover .category_section {
+                //     // display: block;
+                // }
+            }
+
+            .bi-cart3 {
+                font-size: 19px;
+
+                &:hover {
+                    color: #5624D0;
+                }
+            }
+
+            &--btn {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    background: none;
+                    border: 1px solid black;
+                    padding: 10px 12px;
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 700;
+                    font-size: 14px;
+                    font-family: "Open Sans", sans-serif;
+
+
+                    &:hover {
+                        background-color: rgb(226, 226, 226);
+                    }
+
+                    &:nth-child(2) {
+                        background: #2d2f31;
+                        color: white;
+
+                        &:hover {
+                            background: #222425e3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category {
+    display: flex;
+    // display: none;
+
+    &_section {
+        position: relative;
+        left: 120px;
+        top: 6px;
+        width: 270px;
+        height: 580px;
+        border: 1px solid gray;
+        background: rgb(63, 22, 22);
+
+        &-items {
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            font-family: "Open Sans", sans-serif;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+            padding: 15px 15px 10px 15px;
+
+            a {
+                font-family: "Open Sans", sans-serif;
+                font-size: 15px;
+                color: white;
+                text-decoration: none;
+            }
+            
+            &:hover {
+                color: #5624D0;
+            }
+        }
+    }
+
+    &_section-two {
+        position: relative;
+        left: 120px;
+        top: 6px;
+        width: 250px;
+        height: 580px;
+        border: 1px solid gray;
+        background: rgb(115, 53, 53);
+    }
+
+    &_section-three {
+        position: relative;
+        left: 120px;
+        top: 6px;
+        width: 260px;
+        height: 580px;
+        border: 1px solid gray;
+        background: rgb(166, 62, 62);
+
+        h3 {
+            color: #6A6F73;
+            font-family: "Open Sans", sans-serif;
+            padding: 15px 15px 0px 15px;
+            font-size: 16px;
+        }
+    }
+}
