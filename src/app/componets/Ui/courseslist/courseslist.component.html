@@ -1,0 +1,47 @@
+<!--Categories-->
+
+
+
+<div class="category" >
+    <div class="container-fluid">
+        <h2>Top categories</h2>
+        <div class="category__wrapper">
+            @for(category of categoryliststring;track category.id)
+            {
+            <div style="margin: 15px;font-family: fantasy;border: solid rgb(158, 49, 142) 5px;padding: 25px;border-radius: 15px;" 
+            (click)="GetCategoryName($event)" routerLink="/topicslist">
+                <img src={{category.categoryPhotoPath}}
+                    alt="category" style="width: 300px;height: 300px;">
+                <p style="font-size: 30px;color: rgb(214, 67, 91);" class="CategoryName">{{category.name}}</p>
+                <p style="font-size: 15px;color: rgb(67, 175, 214);">{{category.description}}</p>
+            </div>
+        }
+        </div>
+    </div>
+</div>
+
+<div class="quote">
+    <div class="container-fluid">
+        <!-- Swiper -->
+        <div class="swiper mySwiper5">
+            <div class="swiper-wrapper">
+                @for(category of categoryliststring;track category.id)
+                {
+                    <div class="swiper-slide">
+                        <div class="swiper-slide_items" >
+                            <img src="	https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
+                                alt="quote">
+                                <h1>{{category.name}}</h1>
+                            <p style="text-align: center;">{{category.description}}
+                            </p>
+    
+                        </div>
+                       
+                    </div>
+                }
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>

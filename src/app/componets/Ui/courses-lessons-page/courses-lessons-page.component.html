@@ -1,0 +1,314 @@
+<main>
+    <section class="intro">
+        <div class="container-main">
+            <div class="intro-section">
+                <div class="intro-section--title">
+                    <div class="intro-section--title-link">
+                        <a href="#">{{category}}</a>
+                        <i class="bi bi-chevron-right"></i>
+                        <a href="#">{{topicname}}</a>
+                        <i class="bi bi-chevron-right"></i>
+                        <a href="#">{{populartopicname}}</a>
+                    </div>
+                    <h1 style="display: none;">{{courselessons.id}}</h1>
+                    <h1>{{courselessons.name}}</h1>
+                    <p class="intro-section--title-info">{{courselessons.description}}</p>
+
+                    <span>Information about the creator of the course :
+                        <br>FullName  : {{courselessons.auther.fullName}},
+                        <br>Experience : {{courselessons.auther.exprince}}
+                        <br>Additional Information : {{courselessons.auther.about}}
+                        <br>Gmail : {{courselessons.auther.gmail}}
+                    </span>
+
+                    <div class="intro-section--title__items">
+                        <div class="intro-section--title__items-date">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <p>Last updated 1/2024</p>
+                        </div>
+
+                        <div class="intro-section--title__items-lang">
+                            <i class="bi bi-globe"></i>
+                            <p>English</p>
+                        </div>
+
+                        <div class="intro-section--title__items-langs">
+                            <i class="bi bi-keyboard-fill"></i>
+                            English, Arabic [Auto],
+                            <a href="#">14 more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="aside__wrapper">
+                        <img src="https://img-c.udemycdn.com/course/240x135/851712_fc61_6.jpg" alt="course">
+
+                        <div class="aside__wrapper--title">
+                            <span class="aside__wrapper--title-info">
+                                <h2>$9.99</h2>
+                                <p class="price">$74.99</p>
+                                <small>87% off</small>
+                            </span>
+                            <div class="clock">
+                                <i class="bi bi-alarm"></i>
+                                <p><strong>5 days</strong> left at this price!</p>
+                            </div>
+                            <!--Button-->
+                            <button class="add">Add to cart</button>
+                            <button class="buy">Buy now</button>
+
+                            <small class="aside__wrapper--title-desc">30-Day Money-Back Guarantee</small>
+
+                            <strong>This course includes:</strong>
+
+                            <div class="aside__wrapper--title-item">
+                                <div>
+                                    <i class="bi bi-play-btn"></i>
+                                    <p>68.5 hours on-demand video</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-code"></i>
+                                    <p>8 coding exercises</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-file-earmark"></i>
+                                    <p>23 articles</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-file-earmark-arrow-down"></i>
+                                    <p>17 downloadable resources</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-phone"></i>
+                                    <p>Access on mobile and TV</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-infinity"></i>
+                                    <p>Full lifetime access</p>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-trophy"></i>
+                                    <p>Certificate of completion</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="container-main">
+            <div class="info__wrapper">
+                <h2 class="info__wrapper-name">Kurs haqida malumot</h2>
+
+                <div class="info__wrapper--items">
+                    <div class="info__wrapper--items-desc">
+                        @for(lesson of courselessons.lessons ;track lesson.id)
+                            {
+                                <div>
+                                    <i class="bi bi-check2"></i>
+                                    <p>{{lesson.name}} : {{lesson.description}}</p>
+                                </div>
+                            }
+                        
+                    </div>
+
+                    <!-- <div class="info__wrapper--items-desc">
+                       
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            <p>Become an advanced, confident, and modern JavaScript developer from scratch</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="company">
+        <div class="container-main">
+            <div class="company__wrapper">
+                <h4 class="company__wrapper--title">Top companies offer this course to their employees</h4>
+                <p>This course was selected for our collection of top-rated courses trusted by businesses worldwide.
+                    <a href="#">Learn
+                        more</a>
+                </p>
+
+                <div class="company__wrapper-name">
+                    <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-dark.svg" alt="brands">
+                    <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-dark.svg" alt="brands">
+                    <img src="https://s.udemycdn.com/partner-logos/v4/box-dark.svg" alt="brands">
+                    <img src="https://s.udemycdn.com/partner-logos/v4/netapp-dark.svg" alt="brands">
+                    <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-dark.svg" alt="brands">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="coding">
+        <div class="container-main">
+            <div class="coding__wrapper">
+                <div class="coding__wrapper--title">
+                    <h2 class="coding__wrapper--title-name">Coding Exercises</h2>
+                    <p>This course includes our updated coding exercises so you can practice your skills as you
+                        learn.</p>
+
+                    <a href="#">See a demo</a>
+                </div>
+                <div>
+                    <img src="../assets/images/code.png" alt="img" class="code">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container-main">
+            <div class="content__wrapper">
+                <h3 class="content__wrapper-info">Course content</h3>
+
+                <div class="content__wrapper--title">
+                    <p>21 sections • 321 lectures • 68h 34m total length</p>
+                    <a href="#">Expand all sections</a>
+                </div>
+
+
+
+                @for(lesson of courselessons.lessons ;track lesson.id)
+                {
+                    <img src={{lesson.lessonPhotoPath}} alt="" style="width: 700px;">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne" (click)="collapse($event)">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                   
+                                    <h1> {{lesson.name}}</h1>
+                                    <!-- <span>
+                                        <p>4 lectures • 21min</p>
+                                    </span> -->
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <div class="accordion-body-link">
+                                        <span style="display: none;">{{lesson.id}}</span>
+                                        <i class="bi bi-play-btn"></i>
+                                        <a href="#" (click)="GetByLessonId($event)" routerLink="/lesson">video resurs</a>
+                                    </div>
+                                    <!-- <div class="accordion-body-time">
+                                        <a href="#">Preview</a>
+                                        <p>05:25</p>
+                                    </div> -->
+                                </div>
+    
+                                <!-- <div class="accordion-body">
+                                    <div class="accordion-body-link">
+                                        <i class="bi bi-file-earmark"></i>
+                                        <p>Read Before You Start!</p>
+                                    </div>
+                                    <div class="accordion-body-time">
+                                        <p>05:25</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+               
+
+                <!-- <button class="show-more">11 more sections</button> -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="container-main">
+            <div class="description__wrapper">
+                <h3 class="description__wrapper--name">Description</h3>
+                @for(answer of courselessons.answers ;track answer.id)
+                {
+                    <strong>
+                        <i>{{answer.title}}</i>
+                    </strong>
+    
+                    <br>
+    
+                    <span>
+                        <i>{{answer.body}}</i>
+                    </span>
+    
+                    <br><br>
+                }
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="student">
+        <div class="container-main">
+            <div class="student__wrapper">
+                <h2 class="student__wrapper--name">Students also bought</h2>
+                @for(course of courseslist ;track course.id)
+                {<br>
+                    <div class="student__wrapper--items">
+                        <div class="student__wrapper--items-title">
+                            <div>
+                                <img src={{course.coursePhotoPath}} alt="img">
+                            </div>
+                            <div>
+                                <h6>{{course.name}}</h6>
+                                <div class="bestselling">
+                                    <h4>Bestseller</h4>
+                                    <p class="total"></p>
+                                    <small>Updated 3/2024</small>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="rate">
+                            <p>4.6</p>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+    
+                        <div class="people">
+                            <i class="bi bi-people-fill"></i>
+                            <p>1,256,662</p>
+                        </div>
+    
+                        <div class="wishlist">
+                            <div>
+                                <strong>$9.99</strong>
+                                <span>$74.99</span>
+                            </div>
+                            <div>
+                                <i class="bi bi-bag-heart"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+                }
+               
+            </div>
+        </div>
+    </div>
+    
+
+</main>

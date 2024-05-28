@@ -37,8 +37,12 @@ export class LogInComponent {
          
           else if (token.role == 'User')
             //this.router.navigate(['/teacher-login']);
+            
           {
+            localStorage.setItem('UserToken',res.token)
+              console.log("token : "+localStorage.getItem('UserToken'))
             alert('User')
+            
           }
           return res;
         },

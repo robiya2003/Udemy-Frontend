@@ -1,9 +1,13 @@
 <header>
+
     <div class="header-bottom">
         <div class="container">
             <div class="header-bottom__wrapper">
                 <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="logo">
-                <a href="#" class="header-bottom__wrapper-item">Categories</a>
+                <a class="header-bottom__wrapper-item" (mouseover)="GetAllUsers()">Categories</a>
+
+
+
                 <div class="header-bottom__wrapper-search">
                     <i class="bi bi-search"></i>
                     <input type="search" placeholder="Search for anything">
@@ -16,8 +20,8 @@
                 </a>
 
                 <div class="header-bottom__wrapper--btn">
-                    <a [routerLink]="['/login']">Log in</a>
-                    <a [routerLink]="['/register']">Sign up</a>
+                    <a routerLink="/login">Log in</a>
+                    <a routerLink="/register">Sign up</a>
                     <a href="#">
                         <i class="bi bi-globe"></i>
                     </a>
@@ -25,4 +29,46 @@
             </div>
         </div>
     </div>
+    <!--categories-->
+    <div class="category category_toggle" style="z-index: 99999;">
+        <div class="category_section" (mouseover)="GetAllTopicsByCategoryNameFunc($event)" style="display: block;">
+
+            @for(category of categoryliststring;track category.id)
+            {
+                    <div class="category_section-items">
+                        <p id=category.name>{{category.name}}</p>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+            }
+        </div>
+
+
+        <div class="category_section-two" (mouseover)="GetAllPopularTopicssByTopicName($event)">
+            @for(topic of topicliststring;track topic.id)
+            {
+            <div class="category_section-items">
+                <p>{{topic.name}}</p>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        }
+        </div>
+
+        <div class="category_section-three" (mouseover)="GetPopularTopic($event)">
+
+            @for(populartopic of populartopicliststring;track populartopic.id)
+            {
+            <div class="category_section-items" (click)="myReload()">
+                
+                <a routerLink="/allcourses" >{{populartopic.name}}</a>
+                <i class="bi bi-chevron-right"></i>
+                
+            </div>
+        }
+        </div>
+    </div>
+    <!-- CategoryList-->
+
+    
+
 </header>
+

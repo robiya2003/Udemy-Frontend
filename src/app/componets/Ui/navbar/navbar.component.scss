@@ -125,6 +125,7 @@ header {
 .category {
     display: flex;
     // display: none;
+    position: absolute;
 
     &_section {
         position: relative;
@@ -185,3 +186,5 @@ header {
         }
     }
 }
+
+

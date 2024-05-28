@@ -1,0 +1,21 @@
+<button style="background-color:  rgb(89, 158, 49);color: rgb(209, 214, 67);width: 150px;height: 25px;margin: 10px;" routerLink="/">Home Page</button>
+
+
+<!--Topics-->
+<div class="category" >
+    <div class="container-fluid">
+        <h2 style="color:  rgb(89, 158, 49);">{{categoryname}}</h2>
+        <div class="category__wrapper">
+            @for(topic of topicliststring;track topic.id)
+            {
+            <div style="margin: 15px;font-family: fantasy;border: solid rgb(89, 158, 49) 5px;padding: 15px;border-radius: 15px;" 
+            (click)="GetTopicName($event)" routerLink="/populartopicslist">
+                <img src={{topic.topicPhotoPath}}
+                    alt="category" style="width: 300px;height: 300px;">
+                <p style="font-size: 25px;color: rgb(209, 214, 67);" class="CategoryName">{{topic.name}}</p>
+                <p style="font-size: 15px;color: rgb(116, 214, 67); width: 300px;">{{topic.description}}</p>
+            </div>
+        }
+        </div>
+    </div>
+</div>

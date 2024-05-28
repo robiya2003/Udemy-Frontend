@@ -1,0 +1,157 @@
+<main>
+    <section class="course">
+        <!--Courselarni sarlavhasi bolib bu yerda populartopic topic category keladi-->
+        <div class="swiper-container">
+            <div class="course__wrapper">
+                <div class="course__wrapper--title">
+                    <h1>{{populartopicname}}</h1>
+                    <div class="course__wrapper--title-links">
+                        <p class="course__wrapper--title-links_infos">{{populartopicname}} relates to</p>
+                        <a href="#">{{categoryname}},</a>
+                        <a href="#">{{topicname}}</a>
+                    </div>
+                    <div class="course__wrapper--title-members">
+                        <i class="bi bi-people-fill"></i>
+                        <p>16,333,738 learners</p>
+                    </div>
+                </div>
+                
+
+                <div class="course__wrapper--box">
+                    <h2>Courses to get you started</h2>
+                    <p>Explore courses from experienced, real-world experts.</p>
+
+                    <div class="course__wrapper--box-items">
+                        <a href="#">Most Popular</a>
+                        <a href="#">New</a>
+                        <a href="#">Beginner Favorites</a>
+                    </div>
+
+                    
+                    
+                </div>
+                
+            </div>
+           
+           
+            <!--Course List Swiper-->
+            <div class="course__wrapper--box">
+                <h2>Courses to get you started</h2>
+                <p>Explore courses from experienced, real-world experts.</p>
+
+                <div class="course__wrapper--box-items">
+                    <a href="#">Most Popular</a>
+                    <a href="#">New</a>
+                    <a href="#">Beginner Favorites</a>
+                </div>
+
+                <div class="course__wrapper--box-swiper">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper"  >
+                            @for(course of populartopiclistcurses;track course.id)
+                            {
+                                <div  *ngFor="let course of populartopiclistcurses; trackBy: trackByCourseId" class="swiper-slide" (click)="GetCourseName($event)" routerLink="/courselessons">
+
+                                    <div>
+                                        <img [src]=course.coursePhotoPath
+                                        alt="course">
+                                    </div>
+                                    
+                                    <div class="swiper-slide--info" >
+                                        <a href="#" class="coursename" routerLink="/courselessons" >{{course.name}}</a>
+                                        <small></small>
+                                        <div class="rating">
+                                            <p>4.6</p>
+                                            <img src="../assets/images/stars.png" alt="stars">
+                                            <small>(504,657)</small>
+                                        </div>
+    
+                                        <div class="price">
+                                            <strong>$74.99</strong>
+                                            <p>$74.99</p>
+                                        </div>
+    
+                                        <h4>Bestseller</h4>
+                                    </div>
+                                </div>
+                            }
+                            
+
+                          
+
+                          
+
+                          
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <!--All Languages-->
+            <div class="course__wrapper--languages">
+                <h2>JavaScript students also learn</h2>
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        @for(course of populartopiclistcurses;track course.id)
+                        {
+                            <div class="swiper-slide">
+                                <p>{{course.name}}</p>
+                            </div>
+                        }
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <div class="course__wrapper--all-item_accordion">
+                <h1>Learn more about JavaScript</h1>
+                <p class="info">JavaScript is a text-based computer programming language used to make dynamic web
+                    pages. A must-learn for aspiring web
+                    developers or programmers, JavaScript can be used for features like image carousels,
+                    displaying countdowns and timers,
+                    and playing media on a webpage. With JavaScript online classes, you can learn to
+                    build interactive web applications,
+                    choose the best framework, and work with other programming languages like HTML and
+                    CSS.</p>
+
+                    <h2 class="desc">Frequently asked questions</h2>
+
+                    @for(course of populartopiclistcurses;track course.id)
+                    {
+                        @for(answer of course.answers;track answer.id)
+                        {
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <div class="accordion-item" >
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne" (click)="collapse($event)">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                            aria-controls="panelsStayOpen-collapseOne">
+                                            {{answer.title}}
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            {{answer.body}}
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                </div>                            
+                            </div>
+                        }
+                    }
+
+                        
+                    
+              
+            </div>
+           
+        </div>
+
+
+        
+    </section>
+</main>

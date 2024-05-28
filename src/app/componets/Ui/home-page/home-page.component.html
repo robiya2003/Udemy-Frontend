@@ -1,0 +1,355 @@
+<div class="intro-section">
+    <div class="swiper-container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper" style="background-image: url();">
+                @for(news of newslist;track news.id)
+                {
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-box2">
+                            <h6>{{news.id}}</h6>
+                            <h1>{{news.title}}</h1>
+                            <button (click)="GetByNewsId($event)" routerLink="/news">To'liq o'qish</button>
+                        </div>
+                        <img src={{news.newsPhotoPath}} alt="" style="width: 300px;height: 300px;margin-left: 900px;margin-bottom: 500px;">
+                    </div>
+                }
+                  
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+
+<div class="brands">
+    <div class="container-fluid">
+        <div class="brands__wrapper">
+            <h2>Trusted by over 15,000 companies and millions of learners around the world</h2>
+            <div class="brands__wrapper--items">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/volkswagen.svg" alt="volkswagen">
+                <img src="  https://s.udemycdn.com/partner-logos/ou-v1/samsung.svg" alt="samsung">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/cisco.svg" alt="cisco">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/att.svg" alt="att">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/procter_gamble.svg" alt="procter_gamble">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/hewlett_packard_enterprise.svg"
+                    alt="hewlett_packard_enterprise">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/citi.svg" alt="citi">
+                <img src="https://s.udemycdn.com/partner-logos/ou-v1/ericsson.svg" alt="ericsson">
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-courseslist></app-courseslist>
+
+<!--Static joyi-->
+<div class="courses">
+    <div class="container-fluid">
+        <h1>A broad selection of courses</h1>
+        <p>Choose from over 210,000 online video courses with new additions published every month</p>
+        <div class="courses--items">
+            <a href="#">Python</a>
+            <a href="#">Excel</a>
+            <a href="#">Web Development</a>
+            <a href="#">JavaScript</a>
+            <a href="#">Data Science</a>
+            <a href="#">Amazon AWS</a>
+            <a href="#">Drawing</a>
+        </div>
+
+        <div class="courses__wrapper">
+            <h2>Expand your career opportunities with Python</h2>
+            <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful
+                language. Its simple
+                syntax and readability makes Python perfect for Flask, Django, data science, and machine
+                learning. You’ll learn how to
+                build everything from games to sites to apps. Choose from a range of courses that will appeal
+                to...</p>
+
+            <button>Explore Python</button>
+
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg" alt="course">
+                        <a href="#">Automate the Boring Stuff with Python Programming</a>
+                        <small>AI Sweigart</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(112,704)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="	https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2722434_fd59_6.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg" alt="course">
+                        <a href="#">Automate the Boring Stuff with Python Programming</a>
+                        <small>AI Sweigart</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(112,704)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="	https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2722434_fd59_6.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg" alt="course">
+                        <a href="#">Automate the Boring Stuff with Python Programming</a>
+                        <small>AI Sweigart</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(112,704)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="	https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2722434_fd59_6.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg" alt="course">
+                        <a href="#">Automate the Boring Stuff with Python Programming</a>
+                        <small>AI Sweigart</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(112,704)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="	https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="https://img-c.udemycdn.com/course/240x135/2722434_fd59_6.jpg" alt="course">
+                        <a href="#">The Complete Python Bootcamp From Zero to Her...</a>
+                        <small>Jose Portilla, Pierian Training</small>
+                        <div class="rating">
+                            <p>4.6</p>
+                            <img src="./assets/images/stars.png" alt="stars">
+                            <small>(504,657)</small>
+                        </div>
+                        <strong>$74.99</strong>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="comments">
+    <div class="container-fluid">
+        <h2>About Authers</h2>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                @for(auther of autherlist;track auther.id)
+                {
+                    
+                    <div class="swiper-slide">
+                        <img src={{auther.autherPhotoPath}} alt="" style="width: 200px;"><br>
+                        <img src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
+                            alt="quote">
+                            <h4>{{auther.fullName}}</h4>
+                            <h5>{{auther.about}}</h5>
+                            <p ></p>
+                        <p class="title">{{auther.exprince}}</p>
+                        <hr>
+                        <div class="profile">
+                            
+                            <strong>{{auther.gmail}}</strong>
+                        </div>
+                        
+                    </div>
+                }
+              
+
+                
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
