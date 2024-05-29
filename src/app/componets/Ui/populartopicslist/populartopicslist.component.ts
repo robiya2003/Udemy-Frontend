@@ -20,7 +20,7 @@ export class PopulartopicslistComponent {
    this.GetAllPopularTopics()
   }
   GetAllPopularTopics() {
-    this.topicname=localStorage.getItem("topicnameforlist")
+    this.topicname=localStorage.getItem("topicname")
     this.categories.GetAllPopularTopicsByTopicName(this.topicname).subscribe({
       
       next: (data) => {

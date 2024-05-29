@@ -1,0 +1,162 @@
+.intro-section {
+    padding: 0 48px;
+    margin: 0 86px 64px;
+
+    &__wrapper {
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+        }
+
+        &--items {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+            &_title {
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+
+                .cart-img {
+                    width: 190px;
+                }
+
+                h5 {
+                    font-size: 17px;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+
+                &-rating {
+                    padding-top: 7px;
+                    display: flex;
+                    gap: 15px;
+                    align-items: baseline;
+
+                    .bestseller {
+                        cursor: pointer;
+                        font-family: "Open Sans", sans-serif;
+                        font-weight: 700;
+                        font-size: 13px;
+                        padding: 3px 8px;
+                        width: 79px !important;
+                        color: #3D3C0A;
+                        background: #ECEB98;
+                    }
+
+                    .rate {
+                        display: flex;
+                        gap: 5px;
+                        align-items: baseline;
+
+                        &-number {
+                            font-weight: 800;
+                            margin-bottom: 0;
+                        }
+
+                        img {
+                            width: 70px;
+                        }
+
+                        small {
+                            color: dimgray;
+                        }
+                    }
+                }
+
+                .trans-desc {
+                    font-size: 13px;
+                    color: dimgray;
+                }
+            }
+
+            &_link {
+                display: flex;
+                gap: 60px;
+
+                &--remove {
+                    text-align: right;
+
+                    a {
+                        text-decoration: none;
+                        color: #5624D0;
+                        font-size: 15px;
+                    }
+                }
+
+                &--price {
+                    display: flex;
+                    align-items: start;
+                    gap: 8px;
+                    align-items: baseline;
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    .now-price {
+                        color: #A435F0;
+                        font-weight: 800;
+                        font-size: 19px;
+                    }
+
+                    .last-price {
+                        text-decoration: line-through;
+                        color: dimgray;
+                        font-size: 17px;
+                    }
+
+                    i {
+                        color: #A435F0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.no-cart__section {
+    padding: 0 48px;
+    margin: 0 86px 64px;
+
+    &--wrapper {
+        padding-bottom: 40px;
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+        }
+        
+        &-item {
+            box-shadow: 0 0 2px #d1d7dc;
+            padding: 24px;
+            margin-top: 9px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 240px;
+                margin-bottom: 24px;
+            }
+
+            &_infos {
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+
+            button {
+                background: #A435F0;
+                color: white;
+                font-weight: 700;
+                border: none;
+                padding: 13px 12px 15px 12px;
+
+                &:hover{
+                    background:#8726c8;
+                }
+            }
+        }
+    }
+}

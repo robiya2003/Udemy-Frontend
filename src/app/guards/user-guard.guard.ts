@@ -8,7 +8,7 @@ interface Token {
  exp:number;
  iat:number;
  iss:string;
-
+nameid:string
 }
 
 export const authGuard: CanActivateFn = (route, state) => {

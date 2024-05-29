@@ -19,6 +19,7 @@ import { TopicslistComponent } from './componets/Ui/topicslist/topicslist.compon
 import { PopulartopicslistComponent } from './componets/Ui/populartopicslist/populartopicslist.component';
 import { HomePageComponent } from './componets/Ui/home-page/home-page.component';
 import { NewsPageComponent } from './componets/Ui/news-page/news-page.component';
+import { KorzinkaComponent } from './componets/Ui/korzinka/korzinka.component';
 
 /* styles.css or styles.scss */
 @NgModule({
@@ -36,6 +37,7 @@ import { NewsPageComponent } from './componets/Ui/news-page/news-page.component'
     PopulartopicslistComponent,
     HomePageComponent,
     NewsPageComponent,
+    KorzinkaComponent,
 
 ],
   imports: [

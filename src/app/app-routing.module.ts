@@ -11,6 +11,7 @@ import { HomePageComponent } from './componets/Ui/home-page/home-page.component'
 import { NewsPageComponent } from './componets/Ui/news-page/news-page.component';
 import { LessonPageComponent } from './componets/Ui/lesson-page/lesson-page.component';
 import { authGuard } from './guards/user-guard.guard';
+import { KorzinkaComponent } from './componets/Ui/korzinka/korzinka.component';
 //canActivate:[authGuard]
 const routes: Routes = [
   {path:'',title:'',component:HomePageComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:"populartopicslist",title:"populartopicslist",component:PopulartopicslistComponent},
   {path:"courses",title:"courses",component:AllCoursesPageComponent},
   {path:"news",title:"news",component:NewsPageComponent},
-  {path:"lesson",title:"lesson",component:LessonPageComponent}
+  {path:"lesson",title:"lesson",component:LessonPageComponent},
+  {path:"korzinka",title:"korzinka",component:KorzinkaComponent}
 ];
 
 @NgModule({

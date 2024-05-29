@@ -105,7 +105,7 @@ GetCourseName(event: MouseEvent): void {
     coursename = targetElement.textContent || '';
   } else {
     const parentSlideInfo = targetElement.closest('.swiper-slide')?.children[1].querySelector('a')?.textContent;
-    console.log(parentSlideInfo)
+    console.log(targetElement.parentElement)
     coursename=parentSlideInfo;
     localStorage.setItem("coursename", coursename);
   }

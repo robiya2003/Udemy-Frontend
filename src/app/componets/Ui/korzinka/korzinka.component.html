@@ -1,0 +1,93 @@
+
+   
+
+
+
+    <!----------- Main start ----------->
+    <main>
+        @if(userAllcourse.length!=0){
+            <h1>Shopping Cart</h1>
+            @for(course of userAllcourse;track course.id)
+            {
+                <section class="intro-section">
+                    <div class="swiper-container">
+                        <div class="intro-section__wrapper">
+                            
+                            <hr>
+        <!---->
+                            <div class="intro-section__wrapper--items">
+                                <div class="intro-section__wrapper--items_title" (click)="GetCourseName($event)"  routerLink="/courselessons">
+                                    <div>
+                                        <img src={{course.coursePhotoPath}} alt="Cart" class="cart-img">
+                                    </div>
+                                    <div >
+                                        <h5>{{course.name}}</h5>
+                                        <small>By Jonas Schmedtmann</small>
+                                        <div class="intro-section__wrapper--items_title-rating">
+                                            <h4 class="bestseller">Bestseller</h4>
+        
+                                            <div class="rate">
+                                                <p class="rate-number">4.7</p>
+                                                <img src="../assets/images/stars.png" alt="stars">
+                                                <small>(206,145 ratings)</small>
+                                            </div>
+        
+                                        </div>
+                                        <div>
+                                            <p class="trans-desc">68.5 total hours • 321 lectures • All Levels</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="intro-section__wrapper--items_link">
+                                    <div class="intro-section__wrapper--items_link--remove">
+                                        <a href="#">Remove</a> <br>
+                                        <a href="#">Save for Later</a>
+                                    </div>
+        
+        
+                                    <div class="intro-section__wrapper--items_link--price">
+                                        <div>
+                                            <a href="#" class="now-price">$9.99</a> <br>
+                                            <a href="#" class="last-price">$74.99</a>
+                                        </div>
+                                        <i class="bi bi-tag-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            }
+           
+        }
+        @else{
+            <section class="no-cart__section">
+                <div class="swiper-container">
+                   
+                    <div class="no-cart__section--wrapper">
+                        <h1>Shopping Cart</h1>
+                        <strong>0 Courses in Cart</strong>
+    
+                        <div class="no-cart__section--wrapper-item">
+                            <img src="https://s.udemycdn.com/browse_components/flyout/empty-shopping-cart-v2.jpg"
+                                alt="no-cart">
+    
+                                <p class="no-cart__section--wrapper-item_infos">Your cart is empty. Keep shopping to find a course!</p>
+    
+                                <button routerLink="/">Keep shopping</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+        }
+        
+
+    </main>
+    <!----------- Main end ----------->
+
+
+   
+
+

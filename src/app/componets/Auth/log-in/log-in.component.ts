@@ -40,7 +40,9 @@ export class LogInComponent {
             
           {
             localStorage.setItem('UserToken',res.token)
+            localStorage.setItem('UserId',token.nameid)
               console.log("token : "+localStorage.getItem('UserToken'))
+              console.log("UserId",token.nameid)
             alert('User')
             
           }

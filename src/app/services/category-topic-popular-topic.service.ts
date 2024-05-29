@@ -49,4 +49,15 @@ GetAllAuthers(): Observable<any> {
 GetByIdLesson(id:string): Observable<any> {
   return this.http.get<any>(this.baseUrl+`Lesson/GetByIdLesson?Id=${id}`);
 }
+
+//BuyCourseForUser/BuyCourse?UserId=61a79a26-dece-42dd-8775-027dace0c74e&courseId=1
+GetByCourse(Courseid:string,UserId:string): Observable<any> {
+  console.log(Courseid)
+  console.log(UserId)
+  return this.http.put<any>(this.baseUrl+`BuyCourseForUser/BuyCourse?UserId=${UserId}&courseId=${Courseid}`,{});
+}
+// User courses
+UserCourse(UserId:string): Observable<any> {
+  return this.http.get<any>(this.baseUrl+`BuyCourseForUser/GetAllCoursesForUser?userid=${UserId}`);
+}
 }
