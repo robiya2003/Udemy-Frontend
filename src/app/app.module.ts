@@ -66,6 +66,11 @@ import { CategoryNavbarComponent } from './componets/Admin/Category/category-nav
 import { FormsModule } from '@angular/forms';
 import { TopicNavbarComponent } from './componets/Admin/Topic/topic-navbar/topic-navbar.component';
 import { PopularTopicNavbarComponent } from './componets/Admin/PopularTopic/popular-topic-navbar/popular-topic-navbar.component';
+import { AutherNavbarComponent } from './componets/Admin/Auther/auther-navbar/auther-navbar.component';
+import { CourseNavbarComponent } from './componets/Admin/Course/course-navbar/course-navbar.component';
+import { LessonNavbarComponent } from './componets/Admin/Lesson/lesson-navbar/lesson-navbar.component';
+import { AnswerNavbarComponent } from './componets/Admin/Answer/answer-navbar/answer-navbar.component';
+import { NewsNavbarComponent } from './componets/Admin/News/news-navbar/news-navbar.component';
 
 /* styles.css or styles.scss */
 @NgModule({
@@ -129,6 +134,11 @@ import { PopularTopicNavbarComponent } from './componets/Admin/PopularTopic/popu
     CategoryNavbarComponent,
     TopicNavbarComponent,
     PopularTopicNavbarComponent,
+    AutherNavbarComponent,
+    CourseNavbarComponent,
+    LessonNavbarComponent,
+    AnswerNavbarComponent,
+    NewsNavbarComponent,
 
 ],
   imports: [
