@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment.development';
 import { Observable } from 'rxjs/internal/Observable';
@@ -60,4 +60,18 @@ GetByCourse(Courseid:string,UserId:string): Observable<any> {
 UserCourse(UserId:string): Observable<any> {
   return this.http.get<any>(this.baseUrl+`BuyCourseForUser/GetAllCoursesForUser?userid=${UserId}`);
 }
+// File Test uchun servicega yoziladi
+// File Test uchun servicega yoziladi
+uploadFile(file: File): Observable<any> {
+  const formData: FormData = new FormData();
+  formData.append('file', file, file.name);
+
+  const headers = new HttpHeaders({
+    'Content-Type': 'multipart/form-data',
+    'accept': 'text/plain'
+  });
+
+  return this.http.post("https://localhost:7030/api/AAAAAA/UploadFileAdmin", formData,{headers});
+}
+
 }
