@@ -63,6 +63,9 @@ import { UsergetAllComponent } from './componets/Admin/UserControl/userget-all/u
 import { AdminPanelNavbarComponent } from './componets/Admin/admin-panel-navbar/admin-panel-navbar.component';
 import { AdminControlNavbarComponent } from './componets/Admin/AdminControl/admin-control-navbar/admin-control-navbar.component';
 import { CategoryNavbarComponent } from './componets/Admin/Category/category-navbar/category-navbar.component';
+import { FormsModule } from '@angular/forms';
+import { TopicNavbarComponent } from './componets/Admin/Topic/topic-navbar/topic-navbar.component';
+import { PopularTopicNavbarComponent } from './componets/Admin/PopularTopic/popular-topic-navbar/popular-topic-navbar.component';
 
 /* styles.css or styles.scss */
 @NgModule({
@@ -124,6 +127,8 @@ import { CategoryNavbarComponent } from './componets/Admin/Category/category-nav
     AdminPanelNavbarComponent,
     AdminControlNavbarComponent,
     CategoryNavbarComponent,
+    TopicNavbarComponent,
+    PopularTopicNavbarComponent,
 
 ],
   imports: [
@@ -131,6 +136,7 @@ import { CategoryNavbarComponent } from './componets/Admin/Category/category-nav
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
+     FormsModule
   
   ],
   providers: [],

@@ -21,6 +21,16 @@ import { CategoryCreateComponent } from './componets/Admin/Category/category-cre
 import { CategoryUpdateComponent } from './componets/Admin/Category/category-update/category-update.component';
 import { CategoryDeleteComponent } from './componets/Admin/Category/category-delete/category-delete.component';
 import { CategoryGetAllComponent } from './componets/Admin/Category/category-get-all/category-get-all.component';
+import { TopicNavbarComponent } from './componets/Admin/Topic/topic-navbar/topic-navbar.component';
+import { TopicCreateComponent } from './componets/Admin/Topic/topic-create/topic-create.component';
+import { TopicUpdateComponent } from './componets/Admin/Topic/topic-update/topic-update.component';
+import { TopicDeleteComponent } from './componets/Admin/Topic/topic-delete/topic-delete.component';
+import { TopicGetAllComponent } from './componets/Admin/Topic/topic-get-all/topic-get-all.component';
+import { PopularTopicNavbarComponent } from './componets/Admin/PopularTopic/popular-topic-navbar/popular-topic-navbar.component';
+import { PopularTopicCreateComponent } from './componets/Admin/PopularTopic/popular-topic-create/popular-topic-create.component';
+import { PopularTopicUpdateComponent } from './componets/Admin/PopularTopic/popular-topic-update/popular-topic-update.component';
+import { PopularTopicDeleteComponent } from './componets/Admin/PopularTopic/popular-topic-delete/popular-topic-delete.component';
+import { PopularTopicGetAllComponent } from './componets/Admin/PopularTopic/popular-topic-get-all/popular-topic-get-all.component';
 //canActivate:[authGuard]
 const routes: Routes = [
   {path:'',title:'',component:HomePageComponent},
@@ -40,16 +50,33 @@ const routes: Routes = [
     {path:"admincontrol",component:AdminControlNavbarComponent,children:[
           {path:"admincreate",component:AdminCreateComponent} ,
     ]},
-    // Category uchun pathlar
-    {path:"categorycontrol",component:CategoryNavbarComponent,
+          // Category uchun pathlar tugadi ura
+          {path:"categorycontrol",component:CategoryNavbarComponent,
+               children:[
+                  {path:"categorycreate",component:CategoryCreateComponent},
+                  {path:"categoryupdate",component:CategoryUpdateComponent},
+                  {path:"categorydelete",component:CategoryDeleteComponent},
+                  {path:"categorygetall",component:CategoryGetAllComponent}
+          ]},
+           // Topic Uchun
+          {path:"topiccontrol",component:TopicNavbarComponent,
+               children:[
+                    {path:"topiccreate",component:TopicCreateComponent},
+                    {path:"topicupdate",component:TopicUpdateComponent},
+                    {path:"topicdelete",component:TopicDeleteComponent},
+                    {path:"topicgetall",component:TopicGetAllComponent}
+          ]},
+          // PopularTopic
+          {path:"populartopiccontrol",component:PopularTopicNavbarComponent,
           children:[
-            {path:"categorycreate",component:CategoryCreateComponent},
-            {path:"categoryupdate",component:CategoryUpdateComponent},
-            {path:"categorydelete",component:CategoryDeleteComponent},
-            {path:"categorygetall",component:CategoryGetAllComponent}
-          ]}
+                {path:"populartopiccreate",component:PopularTopicCreateComponent},
+                {path:"populartopicupdate",component:PopularTopicUpdateComponent},
+                {path:"populartopicdelete",component:PopularTopicDeleteComponent},
+                {path:"populartopicgetall",component:PopularTopicGetAllComponent}]},
+          // 
   ]},
-  // ,{path:"admincreate",component:AdminCreateComponent}
+ 
+ 
 ];
 
 @NgModule({
