@@ -2,7 +2,7 @@
 # email : robiyahakimova2003@gmail.com
 # password : Qwerty12!@
 
-
+#  backendi run qilishni uch marta qayta qayta run qilinadi sababi SeeDData kop ularni hammasini bir vaqtda jonatish limitidan oshib ketadi
 
 
 
