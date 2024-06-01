@@ -1,1 +1,25 @@
-<p>lesson-create works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Create</h1>
+        <input type="text" placeholder="Enter Lesson Name" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.name" name="name">
+        <input type="text" placeholder="Enter Lesson description" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.description" description="description">
+        <input type="text" placeholder="Enter Lesson Course id" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.CourseId" CourseId="CourseId">
+       
+        <h3>Lesson Image</h3>
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="ImageonFileSelected($event)">
+            
+        </form>
+        <h3>Lesson video</h3>
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="VideoonFileSelected($event)">
+            
+        </form>
+    
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="setUser()">Submit</button>
+    </div>
+    
+}
+@else {
+    <h1>Malumot qoshildi</h1>
+}

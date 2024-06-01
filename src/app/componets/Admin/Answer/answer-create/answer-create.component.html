@@ -1,1 +1,16 @@
-<p>answer-create works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Create</h1>
+        <input type="text" placeholder="Enter Answer CourseId" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.CourseId" CourseId="CourseId">
+        <input type="text" placeholder="Enter Answer Title" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue. Title"  Title=" Title">
+        <input type="text" placeholder="Enter Answer Body" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.Body" Body="Body">
+       
+        
+       
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="setUser()">Submit</button>
+    </div>
+    
+}
+@else {
+    <h1>Malumot qoshildi</h1>
+}

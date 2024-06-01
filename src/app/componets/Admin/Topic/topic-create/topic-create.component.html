@@ -1,1 +1,19 @@
-<p>topic-create works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Create</h1>
+        <input type="text" placeholder="Enter Topic Name" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.Name" Name="Name">
+        <input type="text" placeholder="Enter Topic Description" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.Description" Description="Description">
+        <input type="text" placeholder="Enter Category Id" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setvalue.CategoryId" CategoryId="CategoryId">
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="onFileSelected($event)">
+            
+        </form>
+    
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="setUser()">Submit</button>
+    </div>
+    
+}
+@else {
+    <h1>Malumot qoshildi</h1>
+}
+
