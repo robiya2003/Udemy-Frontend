@@ -1,1 +1,32 @@
-<p>course-update works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Update</h1>
+        <div class="flex items-center gap-3 mb-4">
+            <input type="number" placeholder="Enter id" class=" outline-none border rounded-md p-2 w-[270px]" [(ngModel)]="myId" name="id">
+            <button
+                class="font-medium text-white bg-green-700 hover:bg-green-900 rounded-md p-2 w-[150px]" (click)="GetByIdCourse()">Find
+                Category</button>
+        </div>
+        <img src={{course.coursePhotoPath}} alt="">
+        <input type="text" placeholder="Enter Course Name" class="w-full outline-none border mb-4 rounded-md p-2" required value={{course.name}} [(ngModel)]="setValue.name" name="name">
+        <input type="text" placeholder="Enter Course description" class="w-full outline-none border mb-4 rounded-md p-2" required value={{course.description}} [(ngModel)]="setValue.description" description="description">
+        
+        <h1>{{course.auther.id}} idli auther ga tegishli<br> yangi auther idsini kiriting</h1>
+        <input type="text" placeholder="Enter Course Auther id" class="w-full outline-none border mb-4 rounded-md p-2"   [(ngModel)]="setValue.AutherId" AutherId="AutherId">
+        
+        <h1>{{course.popularTopic.id}} idli popularTopic ga tegishli<br> yangi popularTopic idsini kiriting</h1>
+        <input type="text" placeholder="Enter Course popular topic id" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="setValue.PopularTopicId" PopularTopicId="PopularTopicId">
+       
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="onFileSelected($event)">
+            
+        </form>
+    
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="SetCourse()">Submit</button>
+    
+        
+    </div>
+}
+@else {
+    <h1>Malumot update qilindi</h1>
+}

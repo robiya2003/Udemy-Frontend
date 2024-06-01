@@ -1,1 +1,26 @@
-<p>answer-update works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Update</h1>
+        <div class="flex items-center gap-3 mb-4">
+            <input type="number" placeholder="Enter id" class=" outline-none border rounded-md p-2 w-[270px]" [(ngModel)]="myId" name="id">
+            <button
+                class="font-medium text-white bg-green-700 hover:bg-green-900 rounded-md p-2 w-[150px]" (click)="GetByIdAnswer()">Find
+                Category</button>
+        </div>
+        <img src={{answer.answerPhotoPath}} alt="" style="margin-bottom: 50px;">
+       
+        <input type="text" placeholder="Enter Answer Title" class="w-full outline-none border mb-4 rounded-md p-2" required value={{answer.title}} [(ngModel)]="setValue. Title"  Title=" Title">
+        <input type="text" placeholder="Enter Answer Body" class="w-full outline-none border mb-4 rounded-md p-2" required value={{answer.body}} [(ngModel)]="setValue.Body" Body="Body">
+       
+        <h1>{{answer.course.id}}li coursega mansub <br> Yangi course idsini keltiring</h1>
+        <input type="text" placeholder="Enter Answer CourseId" class="w-full outline-none border mb-4 rounded-md p-2"[(ngModel)]="setValue.CourseId" CourseId="CourseId">
+
+
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="SetAnswer()">Submit</button>
+    
+        
+    </div>
+}
+@else {
+    <h1>Malumot update qilindi</h1>
+}

@@ -1,1 +1,30 @@
-<p>lesson-update works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Update</h1>
+        <div class="flex items-center gap-3 mb-4">
+            <input type="number" placeholder="Enter id" class=" outline-none border rounded-md p-2 w-[270px]" [(ngModel)]="myId" name="id">
+            <button
+                class="font-medium text-white bg-green-700 hover:bg-green-900 rounded-md p-2 w-[150px]" (click)="GetByIdLesson()">Find
+                Category</button>
+        </div>
+        <input type="text" placeholder="Enter Lesson Name" class="w-full outline-none border mb-4 rounded-md p-2" required value={{lesson.name}} [(ngModel)]="setValue.name" name="name">
+        <input type="text" placeholder="Enter Lesson description" class="w-full outline-none border mb-4 rounded-md p-2"  required value={{lesson.description}} [(ngModel)]="setValue.description" description="description">
+        
+        <h1>{{lesson.courses.id}} li coursega mansub <br> yangi course idsini kiriting</h1>
+        <input type="text" placeholder="Enter Lesson Course id" class="w-full outline-none border mb-4 rounded-md p-2"   [(ngModel)]="setValue.CourseId" CourseId="CourseId">
+        
+        
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="ImageonFileSelected($event)">
+        </form>
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="VideoonFileSelected($event)">
+        </form>
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="SetLesson()">Submit</button>
+    
+        
+    </div>
+}
+@else {
+    <h1>Malumot update qilindi</h1>
+}

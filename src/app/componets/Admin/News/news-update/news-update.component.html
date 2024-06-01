@@ -1,1 +1,24 @@
-<p>news-update works!</p>
+@if(!isSubmitted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Update</h1>
+        <div class="flex items-center gap-3 mb-4">
+            <input type="number" placeholder="Enter id" class=" outline-none border rounded-md p-2 w-[270px]" [(ngModel)]="myId" name="id">
+            <button
+                class="font-medium text-white bg-green-700 hover:bg-green-900 rounded-md p-2 w-[150px]" (click)="GetByIdNews()">Find
+                Category</button>
+        </div>
+
+        <img src={{news.newsPhotoPath}} alt="" style="margin-bottom: 50px;">
+        <input type="text" placeholder="Enter News Title" class="w-full outline-none border mb-4 rounded-md p-2" required value={{news.title}} [(ngModel)]="setValue.Title" Title="Title">
+        <input type="text" placeholder="Enter News About" class="w-full outline-none border mb-4 rounded-md p-2" required value={{news.about}}  [(ngModel)]="setValue.About" About="About">
+        <h1>{{news.popularTopic.id}} idli populartopicga mansub <br> Yangi Popular topic idsini kiriting</h1>
+        <input type="text" placeholder="Enter PopularTopic Id" class="w-full outline-none border mb-4 rounded-md p-2"   [(ngModel)]="setValue.PopularTopicId" PopularTopicId="PopularTopicId">
+        <form  enctype="multipart/form-data" style="margin-bottom: 25px;">
+            <input type="file" (change)="onFileSelected($event)">    
+        </form>
+        <button class="font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-md px-4 py-2 w-full mb-8" (click)="SetNews()">Submit</button>
+    </div>
+}
+@else {
+    <h1>Malumot update qilindi</h1>
+}

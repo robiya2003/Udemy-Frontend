@@ -50,12 +50,34 @@ export class CrudServiceService {
 
     return this.http.post<any>(`${this.baseurl}Topic/CreateTopic`, formData);
   }
+  TopicGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`Topic/GetByIdTopic?id=${id}`);
+  }
+  TopicUpdate(id: any, data: any): Observable<any> {
+    const formData = new FormData();
+    console.log(id)
+    console.log(data)
+    formData.append('Id', id);
+    formData.append('CategoryId', data.CategoryId);
+    formData.append('Name', data.Name);
+    formData.append('Description', data.Description);
+    formData.append('imagefile', data.imagefile, data.imagefile.name);
+
+    return this.http.put<any>(this.baseurl + `Topic/UpdateTopic`, formData)
+  }
   // Answer
   AnswerGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"Answer/GetAllAnswer");
   }
   AnswerCreate(data: any): Observable<any> {
     return this.http.post<any>(`${this.baseurl}Answer/CreateAnswer`, data);
+  }
+  AnswerGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`Answer/GetByIdAnswer?id=${id}`);
+  }
+  AnswerUpdate(data: any): Observable<any> {
+    
+    return this.http.put<any>(this.baseurl + `Answer/UpdateAnswer`, data)
   }
   // Auther
  AutherGetAll(): Observable<any[]> {
@@ -71,6 +93,22 @@ export class CrudServiceService {
 
     return this.http.post<any>(`${this.baseurl}Auther/CreateAuther`, formData);
   }
+  AutherGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`Auther/GetByIdAuther?id=${id}`);
+  }
+  AutherUpdate(id: any, data: any): Observable<any> {
+    const formData = new FormData();
+    console.log(id)
+    console.log(data)
+    formData.append('Id', id);
+    formData.append('FullName', data.FullName);
+    formData.append('Exprince', data.Exprince);
+    formData.append('About', data.About);
+    formData.append('Gmail', data.Gmail);
+    formData.append('imagefile', data.imagefile, data.imagefile.name);
+    console.log(formData)
+    return this.http.put<any>(this.baseurl + `Auther/UpdateAuther`, formData)
+  }
   // Course
   CourseGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"Course/GetAllCouses");
@@ -84,6 +122,21 @@ export class CrudServiceService {
     formData.append('imagefile', data.imagefile, data.imagefile.name);
 
     return this.http.post<any>(`${this.baseurl}Course/CreateCourse`, formData);
+  }
+  CourseGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`Course/GetByIdCourse?courseId=${id}`);
+  }
+  CourseUpdate(id: any, data: any): Observable<any> {
+    const formData = new FormData();
+    console.log(id)
+    console.log(data)
+    formData.append('Id', id);
+    formData.append('name', data.name);
+    formData.append('description', data.description);
+    formData.append('AutherId', data.AutherId);
+    formData.append('PopularTopicId', data.PopularTopicId);
+    formData.append('imagefile', data.imagefile, data.imagefile.name);
+    return this.http.put<any>(this.baseurl + `Course/UpdateCourse`, formData)
   }
   // Lesson
   LessonGetAll(): Observable<any[]> {
@@ -99,6 +152,21 @@ export class CrudServiceService {
 
     return this.http.post<any>(`${this.baseurl}Lesson/CreateLesson`, formData);
   }
+  LessonGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`Lesson/GetByIdLesson?id=${id}`);
+  }
+  LessonUpdate(id: any, data: any): Observable<any> {
+    const formData = new FormData();
+    console.log(id)
+    console.log(data)
+    formData.append('Id', id);
+    formData.append('CourseId', data.CourseId);
+    formData.append('name', data.name);
+    formData.append('description', data.description);
+    formData.append('imagefile', data.imagefile, data.imagefile.name);
+    formData.append('videofile', data.videofile, data.videofile.name);
+    return this.http.put<any>(this.baseurl + `Lesson/UpdateLesson`, formData)
+  }
   // News
   NewsGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"News/GetAllNews");
@@ -112,6 +180,20 @@ export class CrudServiceService {
 
     return this.http.post<any>(`${this.baseurl}News/CreateNews`, formData);
   }
+  NewsGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`News/GetByIdNews?id=${id}`);
+  }
+  NewsUpdate(id: any, data: any): Observable<any> {
+    const formData = new FormData();
+    console.log(id)
+    console.log(data)
+    formData.append('Id', id);
+    formData.append('PopularTopicId', data.PopularTopicId);
+    formData.append('Title', data.Title);
+    formData.append('About', data.About);
+    formData.append('imagefile', data.imagefile, data.imagefile.name);
+    return this.http.put<any>(this.baseurl + `News/UpdateNews`, formData)
+  }
   // Popular Topic
   PopularTopicGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"PopularTopic/GetAllPopularTopic");
@@ -124,5 +206,19 @@ export class CrudServiceService {
     formData.append('imagefile', data.imagefile, data.imagefile.name);
 
     return this.http.post<any>(`${this.baseurl}PopularTopic/CreatePopularTopic`, formData);
+  }
+  PopularTopicGetById(id:number): Observable<any> {
+    return this.http.get<any>(this.baseurl+`PopularTopic/GetByIdPopularTopic?id=${id}`);
+  }
+  PopularTopicUpdate(id: any, data: any): Observable<any> {
+    const formData = new FormData();
+    console.log(id)
+    console.log(data)
+    formData.append('Id', id);
+    formData.append('TopicId', data.TopicId);
+    formData.append('Name', data.Name);
+    formData.append('Description', data.Description);
+    formData.append('imagefile', data.imagefile, data.imagefile.name);
+    return this.http.put<any>(this.baseurl + `PopularTopic/UpdatePopularTopic`, formData)
   }
 }
