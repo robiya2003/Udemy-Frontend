@@ -14,7 +14,7 @@ nameid:string
 export const authGuard: CanActivateFn = (route, state) => {
   
   const router = inject(Router);
-  const token = localStorage.getItem('UserToken');
+  const token = localStorage.getItem('AdminToken');
 console.log(token)
   if (token) {
     const decoded: Token = jwtDecode(token);

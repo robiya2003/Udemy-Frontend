@@ -1,3 +1,14 @@
+# Admin paneli uchun 
+# email : robiyahakimova2003@gmail.com
+# password : Qwerty12!@
+
+
+
+
+
+
+
+
 # UdemyFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.

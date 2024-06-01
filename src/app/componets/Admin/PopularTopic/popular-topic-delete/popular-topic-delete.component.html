@@ -1,1 +1,23 @@
-<p>popular-topic-delete works!</p>
+@if(!isDeleted){
+    <div class="w-[450px] shadow-lg m-auto mt-20 rounded-md p-5">
+        <h1 class="text-center mb-8 font-medium text-3xl">Delete</h1>
+        <input type="text" placeholder="Enter Id" class="w-full outline-none border mb-4 rounded-md p-2" [(ngModel)]="myId">
+    
+    
+        <div class="flex gap-4">
+            <button
+                class="font-medium text-white bg-green-700 hover:bg-green-900 rounded-md px-4 py-2 w-full mb-8"(click)="PopularTopicGetById()">Find Category</button>
+    
+                <button class="font-medium text-white bg-red-700 hover:bg-red-900 rounded-md px-4 py-2 w-full mb-8" (click)="DeletePopularTopicGetById()">Delete Category</button>
+
+               
+        </div>
+        <h1>Topic id : {{populartopic.topic.id}}</h1>
+        <h1>populartopic name : {{populartopic.name}}</h1>
+        <h1>populartopic description : {{populartopic.description}}</h1>
+        <img src={{populartopic.popularTopicPhotoPath}} alt="">
+    </div>
+}
+@else {
+    <h1>Ma'lumotlar muvaffaqiyatli o'chirildi</h1>
+}

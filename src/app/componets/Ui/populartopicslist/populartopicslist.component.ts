@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { CategoryTopicPopularTopicService } from '../../../services/category-topic-popular-topic.service';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-populartopicslist',
   templateUrl: './populartopicslist.component.html',
   styleUrl: './populartopicslist.component.scss'
 })
-export class PopulartopicslistComponent {
+export class PopulartopicslistComponent implements AfterViewInit
+{
   categoryliststring!: any[]
- 
+ swiper:any
   populartopicliststring!:any[]
 
   // List uchun
@@ -16,6 +18,27 @@ export class PopulartopicslistComponent {
   topicname!:any
   populartopicname!:any
   constructor(private categories: CategoryTopicPopularTopicService) { }
+  ngAfterViewInit(): void {
+    this.swiper = new Swiper('.mySwiper5', {
+      // Swiper options
+      direction: 'horizontal',
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  }
+  
+ 
+
   ngOnInit(): void {
    this.GetAllPopularTopics()
   }

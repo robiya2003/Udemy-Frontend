@@ -70,7 +70,7 @@ const routes: Routes = [
   {path:"lesson",title:"lesson",component:LessonPageComponent},
   {path:"korzinka",title:"korzinka",component:KorzinkaComponent},
   // Admin uchun
-  {path:"Admin",title:"Admin",component:AdminPanelNavbarComponent
+  {path:"Admin",title:"Admin",component:AdminPanelNavbarComponent,canActivate:[authGuard]
   ,children:[
     {path:"admincontrol",component:AdminControlNavbarComponent,children:[
           {path:"admincreate",component:AdminCreateComponent} ,

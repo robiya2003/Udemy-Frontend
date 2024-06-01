@@ -13,9 +13,35 @@
                 <img src={{topic.topicPhotoPath}}
                     alt="category" style="width: 300px;height: 300px;">
                 <p style="font-size: 25px;color: rgb(209, 214, 67);" class="CategoryName">{{topic.name}}</p>
-                <p style="font-size: 15px;color: rgb(116, 214, 67); width: 300px;">{{topic.description}}</p>
+                <!-- <p style="font-size: 15px;color: rgb(116, 214, 67); width: 300px;">{{topic.description}}</p> -->
             </div>
         }
+        </div>
+    </div>
+</div>
+
+
+<div class="quote">
+    <div class="container-fluid">
+        <!-- Swiper -->
+        <div class="swiper mySwiper5">
+            <div class="swiper-wrapper">
+                @for(topic of topicliststring;track topic.id)
+                {
+                    <div class="swiper-slide">
+                        <div class="swiper-slide_items" >
+                            <img src="	https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
+                                alt="quote">
+                                <h1 style="font-size: 50px;">{{topic.name}}</h1>
+                            <p style="text-align: center;">{{topic.description}}</p>
+    
+                        </div>
+                       
+                    </div>
+                }
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </div>

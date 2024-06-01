@@ -65,6 +65,11 @@ export class CrudServiceService {
 
     return this.http.put<any>(this.baseurl + `Topic/UpdateTopic`, formData)
   }
+  TopicDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `Topic/DeleteTopic?id=${id}`)
+  }
+
+
   // Answer
   AnswerGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"Answer/GetAllAnswer");
@@ -79,6 +84,11 @@ export class CrudServiceService {
     
     return this.http.put<any>(this.baseurl + `Answer/UpdateAnswer`, data)
   }
+  AnswerDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `Answer/DeleteAnswer?id=${id}`)
+  }
+
+
   // Auther
  AutherGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"Auther/GetAllAuther");
@@ -109,6 +119,11 @@ export class CrudServiceService {
     console.log(formData)
     return this.http.put<any>(this.baseurl + `Auther/UpdateAuther`, formData)
   }
+  AutherDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `Auther/DeleteAuther?id=${id}`)
+  }
+
+
   // Course
   CourseGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"Course/GetAllCouses");
@@ -138,6 +153,11 @@ export class CrudServiceService {
     formData.append('imagefile', data.imagefile, data.imagefile.name);
     return this.http.put<any>(this.baseurl + `Course/UpdateCourse`, formData)
   }
+  CourseDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `Course/DeleteCourse?id=${id}`)
+  }
+
+
   // Lesson
   LessonGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"Lesson/GetAllLessons");
@@ -167,6 +187,11 @@ export class CrudServiceService {
     formData.append('videofile', data.videofile, data.videofile.name);
     return this.http.put<any>(this.baseurl + `Lesson/UpdateLesson`, formData)
   }
+  LessonDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `Lesson/DeleteLesson?id=${id}`)
+  }
+
+
   // News
   NewsGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"News/GetAllNews");
@@ -194,6 +219,12 @@ export class CrudServiceService {
     formData.append('imagefile', data.imagefile, data.imagefile.name);
     return this.http.put<any>(this.baseurl + `News/UpdateNews`, formData)
   }
+  NewsDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `News/DeleteNews?id=${id}`)
+  }
+
+
+
   // Popular Topic
   PopularTopicGetAll(): Observable<any[]> {
     return this.http.get<any[]>(this.baseurl+"PopularTopic/GetAllPopularTopic");
@@ -220,5 +251,8 @@ export class CrudServiceService {
     formData.append('Description', data.Description);
     formData.append('imagefile', data.imagefile, data.imagefile.name);
     return this.http.put<any>(this.baseurl + `PopularTopic/UpdatePopularTopic`, formData)
+  }
+  PopularTopicDelete(id: any): Observable<any> {
+    return this.http.delete<any>(this.baseurl + `PopularTopic/DeletePopularTopic?id=${id}`)
   }
 }

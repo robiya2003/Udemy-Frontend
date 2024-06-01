@@ -30,13 +30,18 @@ export class LogInComponent {
           console.log(res);
           const token: any = jwtDecode(res.token);
           console.log(token);
-          if (token.role == 'Admin') //this.router.navigate(['/student-login']);
+          if (token.role == 'Admin') 
          {
           alert('Admin')
+          localStorage.setItem('AdminToken',res.token)
+            localStorage.setItem('AdminId',token.nameid)
+              console.log("token : "+localStorage.getItem('AdminToken'))
+              console.log("AdminId",token.nameid)
+this.router.navigate(['/Admin']);
          }
          
           else if (token.role == 'User')
-            //this.router.navigate(['/teacher-login']);
+            
             
           {
             localStorage.setItem('UserToken',res.token)
@@ -44,6 +49,7 @@ export class LogInComponent {
               console.log("token : "+localStorage.getItem('UserToken'))
               console.log("UserId",token.nameid)
             alert('User')
+            this.router.navigate(['/']);
             
           }
           return res;
