@@ -33,6 +33,7 @@ export class AuthService {
 
   // Log IN
   login(email: string, password: string): Observable<any> {
+    console.log("keli")
     return this.http
       .post<any>(this.baseUrl + `Registratsiya/LogIn`, {
         email: email,

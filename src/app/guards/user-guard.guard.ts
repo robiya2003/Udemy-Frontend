@@ -8,7 +8,8 @@ interface Token {
  exp:number;
  iat:number;
  iss:string;
-nameid:string
+nameid:string;
+role:string;
 }
 
 export const authGuard: CanActivateFn = (route, state) => {
@@ -20,7 +21,9 @@ console.log(token)
     const decoded: Token = jwtDecode(token);
     const expireDate = new Date(decoded.exp * 1000); // Convert expiration timestamp to Date object
     const currentDate = new Date();
-
+if(decoded.role!="Admin"){
+  router.navigate(['/login']);
+}
     console.log("kelddddddddddddddddddddddddddddddddddddddddddddddddddi")
   
     if (expireDate > currentDate) {

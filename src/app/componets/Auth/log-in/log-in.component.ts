@@ -30,6 +30,7 @@ export class LogInComponent {
           console.log(res);
           const token: any = jwtDecode(res.token);
           console.log(token);
+          console.log("keldihhgcggf")
           if (token.role == 'Admin') 
          {
           alert('Admin')
@@ -37,19 +38,42 @@ export class LogInComponent {
             localStorage.setItem('AdminId',token.nameid)
               console.log("token : "+localStorage.getItem('AdminToken'))
               console.log("AdminId",token.nameid)
-this.router.navigate(['/Admin']);
+              this.router.navigate(['/Admin']);
+         }
+         else if (token.role[0] == 'Admin') 
+         {
+          alert('Admin')
+          localStorage.setItem('AdminToken',res.token)
+            localStorage.setItem('AdminId',token.nameid)
+              console.log("token : "+localStorage.getItem('AdminToken'))
+              console.log("AdminId",token.nameid)
+              this.router.navigate(['/Admin']);
          }
          
-          else if (token.role == 'User')
+          else if (token.role[0] == 'User')
             
             
           {
+            console.log("userga keldi")
             localStorage.setItem('UserToken',res.token)
             localStorage.setItem('UserId',token.nameid)
               console.log("token : "+localStorage.getItem('UserToken'))
               console.log("UserId",token.nameid)
+              console.log("UserId",token.role)
             alert('User')
-            this.router.navigate(['/']);
+            this.router.navigate(['']);
+            
+          }
+          else if (token.role== 'User')
+          {
+            console.log("userga keldi")
+            localStorage.setItem('UserToken',res.token)
+            localStorage.setItem('UserId',token.nameid)
+              console.log("token : "+localStorage.getItem('UserToken'))
+              console.log("UserId",token.nameid)
+              console.log("UserId",token.role)
+            alert('User')
+            this.router.navigate(['']);
             
           }
           return res;

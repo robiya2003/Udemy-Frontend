@@ -12,7 +12,7 @@ export class NavbarComponent {
   populartopicliststring!: any[]
   constructor(private categories: CategoryTopicPopularTopicService) { }
   ngOnInit(): void {
-    // localStorage.clear()
+    //localStorage.clear()
     this.GetAllUsers();
     // this.GetAllTopicsByCategoryNameFunc();
   }
