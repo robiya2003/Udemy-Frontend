@@ -1,1 +1,26 @@
-<p>lesson-get-all works!</p>
+<!-- <div class="w-[1100px] shadow-lg m-auto mt-20 rounded-md p-5"> -->
+    <h1 class="font-semibold mx-auto w-[95px] mb-5 text-3xl">Get All</h1>
+    <div class="mb-7">
+        <div class="flex justify-between font-bold text-lg bg-slate-200 py-2 text-indigo-700">
+            <h6 class="w-[200px] text-center">Id</h6>
+            <h6 class="w-[200px] text-center">Name</h6>
+            <h6 class="w-[200px] text-center">Description</h6>
+            <h6 class="w-[200px] text-center">Course</h6>
+            <h6 class="w-[200px] text-center">Photo</h6>
+            
+        </div>
+        <hr>
+        @for(list of lists;track list.id)
+        {
+
+        <div class="flex justify-between py-2 border-b-[1px] text-[15px]">
+            <p class="w-[200px] text-center">{{list.id}}</p>
+            <p class="w-[200px] text-center">{{list.name}}</p>
+            <p class="w-[200px] text-center">{{list.description}}</p>
+            <p class="w-[200px] text-center">{{list.courses.name}}</p>
+           <img src={{list.lessonPhotoPath}} alt="" style="width: 150px;height: 150px;" >
+        </div>
+
+    }
+    </div>
+<!-- </div> -->

@@ -37,4 +37,34 @@ export class CrudServiceService {
   CategoryGetById(id:number): Observable<any> {
     return this.http.get<any>(this.baseurl+`Categories/GetByIdCategory?id=${id}`);
   }
+  // Topic
+  TopicGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"Topic/GetAllTopics");
+  }
+  // Answer
+  AnswerGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"Answer/GetAllAnswer");
+  }
+  // Auther
+ AutherGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"Auther/GetAllAuther");
+  }
+  // Course
+  CourseGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"Course/GetAllCouses");
+  }
+  // Lesson
+
+  LessonGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"Lesson/GetAllLessons");
+  }
+  // News
+  NewsGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"News/GetAllNews");
+  }
+  // Popular Topic
+  PopularTopicGetAll(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseurl+"PopularTopic/GetAllPopularTopic");
+  }
+
 }
